@@ -9,12 +9,12 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes: Quote[] = [
-    new Quote(1, 'Watch finding Nemo', 'Find an online version and watch merlin find his son','','',new Date(2020,3,14)),
-    new Quote(2,'Buy Cookies','I have to buy cookies for the parrot',"","",new Date(2019,6,9)),
-    new Quote(3,'Get new Phone Case','Diana has her birthday coming up soon',"","",new Date(2022,1,12)),
-    new Quote(4,'Get Dog Food','Pupper likes expensive snacks',"","",new Date(2019,0,18)),
-    new Quote(5,'Solve math homework','Damn Math','','',new Date(2019,2,14)),
-    new Quote(6,'Plot my world domination plan','Cause I am an evil overlord','','',new Date(2030,3,14)),
+    new Quote(1,"Imani","If at first you don't succeed, call it version 1.0", 'Anonymous', 'Perseverance',new Date(2020,6,14)),
+    new Quote(2,"Njoki","When life brings big winds of change that almost blow you over,close your eyes, hold on tight and believe", 'Lisa Lieberman', 'Perseverance',new Date(2010,6,14)),
+    new Quote(3,"Kamau", "The elevator to success is out of order. You'll have to use the stairs one step at a time", 'Joe Girald', 'Perseverance',new Date(2020,6,14)),
+    new Quote(4,"Faith","Learn from the mistakes of others. You can never live long enough to make them all yourself", 'Groucho Marx', 'Perseverance',new Date(2020,6,14)),
+    new Quote(5,"Maureen","If at first you don't succeed, then skydiving definitely isn't for you", 'Steven Wright', 'Perseverance',new Date(2020,6,14)),
+    new Quote(6,"Henry","Behind every good programmer is a frustrated programmer", 'Imani Kamau', 'Perseverance',new Date(2020,6,14)),
   ];
 
   toggleDetails(index){
