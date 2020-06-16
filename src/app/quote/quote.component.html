@@ -1,10 +1,12 @@
-<h1>My Quotes</h1>
+<h1>Hamasisha Quotes</h1>
 <ul>
   <div *ngFor='let quote of quotes;let i = index'>
-    <li appHighlight>{{quote.name}} due on {{quote.publishDate|date|uppercase}}</li> 
+    <p appHighlight>{{quote.words}} posted on {{quote.publishDate|date|uppercase}} by {{quote.submitter}}</p> 
+    <button (click) = "likeButtonClick()" class= "btn btn-success">Like</button>
+    <button (click) = "dislikeButtonClick()" class ="btn btn-danger">Dislike</button>
     
-    <button (click)='toggleDetails(i)'>More Details</button>
-    <app-quote-details *ngIf='quote.showMore' [quote]='quote' (isUnwanted) = 'deleteQuote($event,i)'></app-quote-details>
+    <button (click)='toggleDetails(i)'>Theme</button>
+    <app-quote-details *ngIf='quote.showTheme' [quote]='quote' (isUnwanted) = 'deleteQuote($event,i)'></app-quote-details>
   </div>
   <div class="col-md-6">
     <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>

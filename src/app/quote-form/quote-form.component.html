@@ -4,18 +4,18 @@
     <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
         <div class="form-group">
   
-            <label for="name">Name</label>
-            <input type="text" class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name='ngModel' required>
-            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-              <p>Name is required</p>
+            <label for="words">Quote</label>
+            <input type="text" class="form-control" id="words" [(ngModel)]="newQuote.words" name="words" #words='ngModel' required>
+            <div [hidden]="words.valid || words.pristine" class="alert alert-danger">
+              <p>A quote is required</p>
             </div>
         </div>
         <div class="form-group">
   
-            <label for="more">More</label>
-            <textarea class="form-control" id="more" rows="4" [(ngModel)]="newQuote.more" name="more" #more="ngModel" required></textarea>
-            <div [hidden]="more.valid || more.pristine" class="alert alert-danger">
-              <p>Please add more details</p>
+            <label for="theme">Theme</label>
+            <textarea class="form-control" id="theme" rows="4" [(ngModel)]="newQuote.theme" name="theme" #theme="ngModel" required></textarea>
+            <div [hidden]="theme.valid || theme.pristine" class="alert alert-danger">
+              <p>Please add a Theme</p>
             </div>
         </div>
         <div class="form-group">
