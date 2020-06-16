@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Quote } from '../quote';
 
 @Component({
-  selector: 'app-goal',
-  templateUrl: './goal.component.html',
-  styleUrls: ['./goal.component.css']
+  selector: 'app-quote',
+  templateUrl: './quote.component.html',
+  styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
 
-  goals:Quote[] = [
+  quotes:Quote[] = [
     {id:1, name:'Watch finding Nemo'},
     {id:2,name:'Buy Cookies'},
     {id:3,name:'Get new Phone Case'},
