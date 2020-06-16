@@ -8,18 +8,40 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
 
-  quotes:Quote[] = [
-    {id:1, name:'Watch finding Nemo'},
-    {id:2,name:'Buy Cookies'},
-    {id:3,name:'Get new Phone Case'},
-    {id:4,name:'Get Dog Food'},
-    {id:5,name:'Solve math homework'},
-    {id:6,name:'Plot my world domination plan'},
+  quotes: Quote[] = [
+    new Quote(1, 'Watch finding Nemo', 'Find an online version and watch merlin find his son','','',new Date(2020,3,14)),
+    new Quote(2,'Buy Cookies','I have to buy cookies for the parrot',"","",new Date(2019,6,9)),
+    new Quote(3,'Get new Phone Case','Diana has her birthday coming up soon',"","",new Date(2022,1,12)),
+    new Quote(4,'Get Dog Food','Pupper likes expensive snacks',"","",new Date(2019,0,18)),
+    new Quote(5,'Solve math homework','Damn Math','','',new Date(2019,2,14)),
+    new Quote(6,'Plot my world domination plan','Cause I am an evil overlord','','',new Date(2030,3,14)),
   ];
 
-  constructor() { }
+  toggleDetails(index){
+    this.quotes[index].showMore = !this.quotes[index].showMore;
+  }
 
+  deleteQuote(isUnwanted: any, index: number){
+    if (isUnwanted) {
+      let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
+
+      if (toDelete){
+        this.quotes.splice(index,1)
+      }
+    }
+  }
+
+  addNewQuote(quote){
+    let goalLength = this.quotes.length;
+    quote.id = goalLength+1;
+    quote.publishDate = new Date(quote.publishDate)
+    this.quotes.push(quote)
+  }
+  constructor() { }
+ 
   ngOnInit() {
   }
 
+
 }
+ 
