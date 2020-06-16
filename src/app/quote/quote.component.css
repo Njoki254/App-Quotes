@@ -1,5 +1,13 @@
-body{
+@import url(https://fonts.googleapis.com/css2?family=Suez+One&display=swap);
+
+.container-fluid{
+    background-image: url(/assets/wall.jpg);
+    text-align: center;
+}
+
+#quote-details{
     background-image: url("/assets/yellowsand.jpg");
     background-size: cover;
-    font-size: medium;
+    font-size: 30px;
+    font-style: 'Suez One', serif;
 }

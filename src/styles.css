@@ -1,20 +1,8 @@
+
 body{
-    background-image: url("../src/assets/wall.jpg");
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: absolute;
-    text-align: center;
-  }
   
-  #landing{
-      background-image: url("../src/assets/yellowsand.jpg");
-      background-position: center center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      align-items: center
-      
-  
-  }
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
