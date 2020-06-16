@@ -37,6 +37,18 @@ export class QuoteComponent implements OnInit {
     quote.publishDate = new Date(quote.publishDate)
     this.quotes.push(quote)
   }
+
+  numberOfLikes: number =0;
+
+  likeButtonClick(){
+    this.numberOfLikes++;
+
+
+  }
+  dislikeButtonClick() {
+    this.numberOfLikes --;
+
+  }
   constructor() { }
  
   ngOnInit() {

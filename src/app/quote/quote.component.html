@@ -1,7 +1,10 @@
 <h1>Hamasisha Quotes</h1>
 <ul>
   <div *ngFor='let quote of quotes;let i = index'>
-    <p appHighlight>{{quote.words}} posted on {{quote.publishDate|date|uppercase}} by {{quote.submitter}}</p> 
+    <p appHighlight>{{quote.words}} posted on {{quote.publishDate|date|uppercase}} by {{quote.submitter}}
+        <br>{{numberOfLikes}}
+    </p> 
+    
     <button (click) = "likeButtonClick()" class= "btn btn-success">Like</button>
     <button (click) = "dislikeButtonClick()" class ="btn btn-danger">Dislike</button>
     
