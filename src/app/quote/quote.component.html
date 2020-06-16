@@ -1,18 +1,26 @@
-<h1>Hamasisha Quotes</h1>
-<ul>
-  <div *ngFor='let quote of quotes;let i = index'>
-    <p appHighlight>{{quote.words}} posted on {{quote.publishDate|date|uppercase}} by {{quote.submitter}}
-        <br>{{numberOfLikes}}
-    </p> 
-    
-    <button (click) = "likeButtonClick()" class= "btn btn-success">Like</button>
-    <button (click) = "dislikeButtonClick()" class ="btn btn-danger">Dislike</button>
-    
-    <button (click)='toggleDetails(i)'>Theme</button>
-    <app-quote-details *ngIf='quote.showTheme' [quote]='quote' (isUnwanted) = 'deleteQuote($event,i)'></app-quote-details>
-  </div>
-  <div class="col-md-6">
-    <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
-</div>
-</ul>
-<p *ngIf='quotes.length > 5'>You have too many quotes</p>
+ <html>
+     <body>
+        <h1>Hamasisha Quotes</h1>
+        <ul>
+        <div *ngFor='let quote of quotes;let i = index'>
+            <p appHighlight>{{quote.words}} <br>
+                <br>
+                posted on {{quote.publishDate|date|uppercase}} by {{quote.submitter}}
+                <br>
+            <br>{{quote.like}}
+            </p> 
+           
+            
+            <button (click) = "likeButtonClick(i)" class= "btn btn-success">Like</button>
+            <button (click) = "dislikeButtonClick(i)" class ="btn btn-danger">Dislike</button>
+            
+            <button (click)='toggleDetails(i)'>Theme</button>
+            <app-quote-details *ngIf='quote.showTheme' [quote]='quote' (isUnwanted) = 'deleteQuote($event,i)'></app-quote-details>
+        </div>
+        <div class="col-md-6">
+            <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+        </div>
+        </ul>
+        <p *ngIf='quotes.length > 5'>You have too many quotes</p>
+    </body>
+</html>
