@@ -3,16 +3,19 @@
         height="60"></h1>
     <ul>
     <div *ngFor='let quote of quotes;let i = index' id="quote-details">
-        <p appHighlight id="quote">{{quote.words}} <br>
-            posted on {{quote.publishDate|date|uppercase}} by {{quote.submitter}}
-            <br>
-        <br>{{quote.like}}
-        </p> 
+        <p id="main-words" appHighlight>{{quote.words}} </p>
+        <p id="details">posted on {{quote.publishDate|date|uppercase}} by {{quote.submitter}}</p>
+        
+        
+            
+        <p>{{quote.like}}</p>
+        
         
         <div id="buttons">
         <button (click) = "likeButtonClick(i)" class= "btn btn-success">Like</button>
         <button (click) = "dislikeButtonClick(i)" class ="btn btn-danger">Dislike</button>
-        <button (click)='toggleDetails(i)'>More Details</button>
+        <button (click)='toggleDetails(i)'>More</button>
+        
         </div>
         
         <app-quote-details *ngIf='quote.showTheme' [quote]='quote' (isUnwanted) = 'deleteQuote($event,i)'></app-quote-details>
