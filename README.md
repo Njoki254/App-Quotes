@@ -18,6 +18,7 @@ Below is the link to the deployed site.
 ## Live Site
 [Hamasisha Quotes](https://njoki254.github.io/Quotes-App/.)
 
+![alt text](./assets/hamasisha.jpg)
 
 ## Technologies Used
 
