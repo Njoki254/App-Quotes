@@ -7,6 +7,7 @@ import { Quote } from '../quote';
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
+  
 
   quotes: Quote[] = [
     new Quote(1,"If at first you don't succeed, call it version 1.0", 'Perseverance', "Imani", 'Anonymous',new Date(2020,6,14),0),
@@ -16,6 +17,31 @@ export class QuoteComponent implements OnInit {
     new Quote(5,"If at first you don't succeed, then skydiving definitely isn't for you","Perseverance","David",'Steven Wright',new Date(2020,6,14),0),
     new Quote(6,"Behind every good programmer is a frustrated programmer", 'Perseverance',"Mary",'Anonymous',new Date(2020,6,14),0),
   ];
+
+  customOptions: any = {
+    loop: true,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
+    dots: false,
+    navSpeed: 700,
+    navText: ['', ''],
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 2
+      },
+      740: {
+        items: 3
+      },
+      940: {
+        items: 4
+      }
+    },
+    nav: true
+  }
 
   toggleDetails(index){
     this.quotes[index].showTheme = !this.quotes[index].showTheme;

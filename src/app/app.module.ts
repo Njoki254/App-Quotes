@@ -6,9 +6,12 @@ import { AppComponent } from './app.component';
 import { QuoteComponent } from './quote/quote.component';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { HighlightDirective } from './highlight.directive';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import {Routes, RouterModule } from  '@angular/router';
 import { TimePassedPipe } from './time-passed.pipe';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { FormsModule } from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -17,12 +20,15 @@ import { FormsModule } from '@angular/forms';
     QuoteDetailsComponent,
     HighlightDirective,
     TimePassedPipe,
-    QuoteFormComponent
+    QuoteFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    CarouselModule,
+    BrowserAnimationsModule,
+    RouterModule.forRoot([]),
   ],
   providers: [],
   bootstrap: [AppComponent]
