@@ -121,6 +121,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Hamasisha"
+    }
+  },
+  "defaultProject": "Hamasisha",
+  "cli": {
+    "analytics": "ba099a14-d250-4bac-bb8e-e60b74903ef0"
+  }
 }
