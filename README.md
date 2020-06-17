@@ -2,7 +2,7 @@
 
 ## Author
 
-Njoki Kamau
+**Njoki Kamau**
 
 ## Description
 
@@ -16,7 +16,7 @@ In this quote application, the user is able to upvote or downvote on the quotes 
 Below is the link to the deployed site.
 
 ## Live Site
-
+[Hamasisha Quotes](https://njoki254.github.io/Hamasisha-Quotes/.)
 
 
 ## Technologies Used
