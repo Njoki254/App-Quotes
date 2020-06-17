@@ -1,48 +1,55 @@
-<header>
-  <div class="header">
-    <img id="brand" alt="" src="images/favicon.ico">&nbsp;&nbsp;&nbsp;
-    <div class="logo">
-      <h2 id="logo"><strong>Hamasisha Quotes</strong></h2>
+
+ <header>
+    <div class="header">
+      <img id="brand" alt="" src="images/favicon.ico">&nbsp;&nbsp;&nbsp;
+      <div class="logo">
+        <h2 id="logo"><strong>Hamasisha Quotes</strong></h2>
+      </div>
+      <nav class="container-fluid" id="subscription">
+      
+          
+            <a href=""id="subscribe"><strong>Subscribe</strong></a>	&nbsp;&nbsp;&nbsp;
+
+            <a href="#newQuote" id="create-Quote"><strong>Create Quote</strong></a>
+
+      </nav>
     </div>
-    <nav class="container-fluid">
-      <ul>
-        <li>
-          <a href=""id="play"><strong>Subscribe</strong></a>
-        </li>
-        <li>
-          <a href="" id="instructions"><strong>About Us</strong></a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
-<div class="container-fluid">
-    
-      <p>Hamasisha means inspire in swahili</p>
-    
+  </header>
+  <div class="container-fluid" id="carousel">
+      
+      
+      
+          
+        <owl-carousel-o [options]="customOptions">
+          <ng-container *ngFor='let quote of quotes;let i = index'id="quote-details">
         
-    
-    <div *ngFor='let quote of quotes;let i = index' id="quote-details">
-        
-            <p id="main-words" appHighlight><strong>{{quote.words}} {{quote.maxlikes}}</strong></p>
-            <p id="details"><strong>posted on {{quote.publishDate|date|titlecase}} by {{quote.submitter}}</strong></p>
-            
-            
+            <ng-template carouselSlide [i]='quotes'>
+              <div appHighlight class="quote-wrapper">
+                <p id="quote-words"><strong>{{quote.words}}</strong></p>
+                <br>
                 
-            <p>{{quote.like}}</p>
-            
-            
-            <div id="buttons">
-              <button (click) = "likeButtonClick(i)" class= "btn btn-success"><i style="font-size:24px" class="fa fa-thumbs-up"></i></button>
-            <button (click) = "dislikeButtonClick(i)" class ="btn btn-danger"><i style="font-size:24px" class="fa fa-thumbs-down"></i></button>
-                <button (click)='toggleDetails(i)'>More</button> 
-            
-            </div>
-            
-            <app-quote-details *ngIf='quote.showTheme' [quote]='quote' (isUnwanted) = 'deleteQuote($event,i)'></app-quote-details>
-    </div>
-    <div class="card">
-          <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
-    </div>
-    
-</div>
+                  <p id="details"><strong>posted on {{quote.publishDate|date|titlecase}} by {{quote.submitter}}</strong></p>
+                  
+                  
+                      
+                  <p id="likes"><strong>{{quote.like}}</strong></p>
+                  
+                  
+                  <div id="buttons">
+                    <button (click) = "likeButtonClick(i)" class= "btn btn-success"><i style="font-size:24px" class="fa fa-thumbs-up"></i></button>
+                  <button (click) = "dislikeButtonClick(i)" class ="btn btn-warning"><i style="font-size:24px" class="fa fa-thumbs-down"></i></button>
+                      <button (click)='toggleDetails(i)' class="button">More</button> 
+                  
+                  </div>
+                  
+                  <app-quote-details *ngIf='quote.showTheme' [quote]='quote' (isUnwanted) = 'deleteQuote($event,i)'></app-quote-details>
+              </div>
+            </ng-template>  
+          </ng-container>
+        </owl-carousel-o>
+          
+      
+            <app-quote-form id="newQuote" (addQuote)="addNewQuote($event)"></app-quote-form>
+      
+      
+  </div>

@@ -1,10 +1,15 @@
 @import url(https://fonts.googleapis.com/css2?family=Suez+One&display=swap);
 
+*{
+    color: black;
+    
+}
 .container-fluid{
-    background-color: #E6D1D7;
+    background-color: #9CB38A;
     text-align: center;
     color: rgb(37, 37, 35);
     font-style: 'Suez One', serif;
+    display: inline;
 }
 
 #quote-details{
@@ -24,12 +29,62 @@
 }
 
 header {
-    background-color: #5F7CC1;
-    color:gold;
+    background-color: #9CB38A;
+    color:#495729;
 }
 .header {
     display: flex;
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
+}
+#subscription{
+    display: inline-block;
+    color: black;
+    background-color: #9CB38A;
+
+}
+#carousel{
+    font-size: 40px;
+    width: 100%;
+    height: auto;
+    background-color: #BCCEA5;
+    background-attachment: fixed ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no repeat;
+    font-style: 'Suez One', serif;
+}
+    
+
+.quote-wrapper{
+    width: 70%;
+    height: 20%;
+    background-image: url("/assets/leaf.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+}
+#logo{
+    color: black;
+}
+#quote-words{
+    font-size: 45px;
+    color: black;
+}
+
+#details{
+    font-size: 35px;
+
+}
+#likes{
+    color: black;
+    font-size: 20px;
+}
+#newQuote{
+    background-color:#BCCEA5;
+}
+.button{
+    background-color: #89A051;
 }

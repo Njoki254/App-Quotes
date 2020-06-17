@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Quote } from '../quote';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-quote',
@@ -18,7 +19,7 @@ export class QuoteComponent implements OnInit {
     new Quote(6,"Behind every good programmer is a frustrated programmer", 'Perseverance',"Mary",'Anonymous',new Date(2020,6,14),0),
   ];
 
-  customOptions: any = {
+  customOptions: OwlOptions = {
     loop: true,
     mouseDrag: false,
     touchDrag: false,
