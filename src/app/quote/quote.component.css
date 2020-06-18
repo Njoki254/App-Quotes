@@ -61,7 +61,7 @@ header {
 .quote-wrapper{
     width: 70%;
     height: 20%;
-    background-image: url("/assets/leaf.jpg");
+    background-image: url(".././src/assets/leaf.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     color: black;
