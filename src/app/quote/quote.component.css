@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Suez+One&display=swap);
 
 *{
-    color:#495729 ;
+    color:black ;
     
 }
 .container-fluid{
@@ -13,7 +13,6 @@
 }
 
 #quote-details{
-    background-image: url("/assets/ocean.jpg");
  
     background-attachment: fixed ;
     background-repeat: no-repeat;
