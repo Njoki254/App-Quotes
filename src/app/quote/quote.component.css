@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Suez+One&display=swap);
 
 *{
-    color: black;
+    color:#495729 ;
     
 }
 .container-fluid{
@@ -61,7 +61,7 @@ header {
 .quote-wrapper{
     width: 70%;
     height: 20%;
-    background-image: url(".././src/assets/leaf.jpg");
+    background-color: #F3F4FB;
     background-repeat: no-repeat;
     background-size: cover;
     color: black;
